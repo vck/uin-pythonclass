@@ -1,32 +1,32 @@
 # MODUL PEMROGRAMAN PYTHON
+Pengenalan Pemrograman Python Bagian 1
+
+oleh: 
+
+Vicky Vernando Dasta
+
+vicky.vernando@student.unri.ac.id
 
 
-> oleh: Vicky Vernando Dasta
-
-> vicky.vernando@student.unri.ac.id
-
----
 
 # 1. Pengenalan
 
 
-Pemrograman tingkat tinggi menekankan pada produktifitas. Python awalnya hadir dalam bentuk ide bagaimana membuat
-program layaknya Bash pada *nix* platform, seiring berkembangnya Python, penggunaan Python tidak hanya pada bahasa 
-scripting pengganti bash, namun sebagai bahasa pemrograman tingkat tinggi yang mampu melakukan hampir semua kebutuhan 
-komputasi seperti simulasi saintifik, pemrosesan data dan kebutuhan komputasi lain. Pada modul ini akan dijelaskan mengenai 
-penggunaan Python dari dasar sampai pembuatan aplikasi yang bisa langsung dipakai. Python menggunakan dua konsep dalam bahasa 
-pemrograman, interpreted language dan compiled language. Untuk menjalankan script `*.py` diperlukan sebuah interpreter 
-yang bisa diunduh di [http://www.python.org](http://www.python.org). 
+Pemrograman tingkat tinggi menekankan pada produktifitas. Python awalnya digunakan sebagai bahasa scripting layaknya
+Bash pada `*nix` platform, seiring berkembangnya Python, penggunaan Python tidak hanya pada bahasa  scripting pengganti bash, 
+namun sebagai bahasa pemrograman tingkat tinggi yang mampu melakukan hampir semua kebutuhan komputasi seperti simulasi saintifik, 
+pemrosesan data dan kebutuhan komputasi lain. Pada modul ini akan dijelaskan mengenai penggunaan Python dari dasar sampai pembuatan 
+aplikasi yang bisa langsung dipakai. Python menggunakan dua konsep dalam bahasa pemrograman, interpreted language dan compiled language. 
+Untuk menjalankan script `*.py` diperlukan sebuah interpreter yang bisa diunduh di [http://www.python.org](http://www.python.org). 
 
 
 # 2. Penggunaan
 
 
 Untuk pengajaran Python, akan digunakan Google Colab, platform ini dipilih karena tidak diperlukan instalasi lokal
-sehingga lebih efisien dalam segi waktu. Sedangkan untuk penggunaan python secara lokal (offline), bisa mengikuti
+sehingga lebih efisien dalam segi waktu. Sedangkan untuk penggunaan python secara lokal *(offline)*, bisa mengikuti
 tutorial instalasi Python di [http://www.python.org](http://www.python.org). Pada kelas ini, kita akan menggunakan
-Python versi 3.x (>3.4) lebih baik, karena terdapat beberapa perbaikan dan pembaruan fitur yang lebih baik untuk performa program
-yang akan kita buat.
+Python versi 3.x (>3.4) lebih baik, karena terdapat beberapa perbaikan dan pembaruan fitur yang lebih baik untuk performa program.
 
 
 # 3. Google Colab
@@ -34,6 +34,7 @@ yang akan kita buat.
 
 Google Colab adalah platform yang ditujukan pada researcher/peminat machine learning, platform ini berupa Jupyter
 Notebook yang sudah dibekali *instance Graphic Processing Unit* (GPU) yang diberikan oleh Google .Inc secara cuma-cuma. 
+
 
 Berikut cara penggunaan Google Colab:
 
@@ -127,37 +128,37 @@ c = 3e+8
 
 ## a. Integer
    
-> Bilangan bulat. Panjang integer pada Python tergantung dari tipe prosesor dari sistem.
-> Untuk sistem dengan prosesor 32-bit, maka banyak digit yang bisa disimpan adalah sebanyak 2e+31
-> dan 2e+63 digit untuk 64-bit.
+Bilangan bulat. Panjang integer pada Python tergantung dari tipe prosesor dari sistem.
+Untuk sistem dengan prosesor 32-bit, maka banyak digit yang bisa disimpan adalah sebanyak 2e+31
+dan 2e+63 digit untuk 64-bit.
 
-> contoh: `num = 1337`
+contoh: `num = 1337`
 
 ## b. Boolean
    
-> Boolean merupakan representasi dari nilai kebenaran, berisi `True` atau `False`
+Boolean merupakan representasi dari nilai kebenaran, berisi `True` atau `False`
 
-> contoh: `truth_val = True if a == 1 else False`
+contoh: `truth_val = True if a == 1 else False`
    
 ## c. String
 
-> String merupakan sebuah urutan nilai yang merupakan representasi dari sebuah nilai unicode.
-> String pada Python diapit oleh satu quote atau lebih. 
+String merupakan sebuah urutan nilai yang merupakan representasi dari sebuah nilai unicode.
+String pada Python diapit oleh satu quote atau lebih. 
 
-> contoh:
+contoh:
 
-> `welcome_message = "Hello {}!"`
+`welcome_message = "Hello {}!"`
    
-> `print(welcome_message.format('Guido'))`
+`print(welcome_message.format('Guido'))`
    
 
 ## d. Float
 
-> Bilangan berkoma (floating point)
+Bilangan berkoma (floating point)
 
-> contoh:
+contoh:
    
-> `phi = 3.14`
+`phi = 3.14`
 
       
 ## e. List
@@ -205,11 +206,11 @@ Berikut adalah operasi yang bisa dilakukan dengan list:
 > `nums.count(1)`
    
    
-- `pop`
+- `pop([n])`
     
-> Fungsi `pop` digunakan untuk menghapus item di indeks terakhir pada list. 
-> pada `nums`, bila method pop dioperasikan/dipanggil maka item 5 akan dihapus
-> dari list `nums`.
+> Fungsi `pop` digunakan untuk menghapus item di indeks terakhir pada list bila index tidak ditentukan
+> secara langsung, bila indeks ditentukan, maka item di index `n` akan dihapus dari list. 
+> Pada `nums`, bila method pop dioperasikan/dipanggil maka item 5 akan dihapus dari list `nums`.
 
 > contoh:
    
@@ -458,14 +459,21 @@ Statement `continue` adalah kebalikan dari `break`.
 # 9. Fungsi 
 
 Fungsi atau rutin adalah sebuah bagian dari program yang mengerjakan operasi spesifik.
-Pada Python digunakan keyword `def` dan `lambda` untuk membuat sebuah fungsi. 
-`def` digunakan untuk fungsi bernama (named-function) dan `lambda` digunakan untuk fungsi tak 
-bernama (anonymous function). 
+Pada Python digunakan keyword `def` dan `lambda` untuk membuat sebuah fungsi.
 
 struktur fungsi:
+
+- def:
 
 ```
 def namafungsi(param1, param2, ..., paramN):
    # lakukan sesuatu terhadap params
    return sesuatu
+```
+
+- lambda:
+
+```
+x = lambda x: x*12
+print(x(12)) # 144
 ```
